@@ -46,7 +46,7 @@ def main(args=None):
     node = RobotSensorsPublisher()
 
     rclpy.spin(node)
-
+    
     node.destroy_node()
     rclpy.shutdown()
 
