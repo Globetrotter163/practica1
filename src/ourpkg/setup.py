@@ -30,6 +30,7 @@ setup(
         'console_scripts': [
             'my_node = ourpkg.my_node:main',
             'sensors_pub = ourpkg.two_sensors:main',
+            'sensors_monitor = ourpkg.sensor_monitor:main',
         ],
     },
 )
