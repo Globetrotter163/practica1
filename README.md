@@ -87,15 +87,3 @@ Los launch files están ubicados dentro del directorio `launch/` del paquete.
 * Es necesario tener **ROS 2 instalado y configurado** antes de ejecutar el workspace.
 
 ---
-
-## Recomendación
-
-En proyectos ROS reales normalmente **no se suben al repositorio los directorios generados por compilación**, como:
-
-```
-build/
-install/
-log/
-```
-
-Estos directorios suelen excluirse utilizando un archivo `.gitignore`.
