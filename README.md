@@ -1,49 +1,42 @@
-Aquí tienes el **README en formato Markdown listo para pegar en GitHub**.
-
-```markdown
 # practica1
 
-Workspace de **ROS 2** utilizado para la práctica de robótica.  
-El repositorio contiene ejercicios y ejemplos desarrollados durante la práctica.
+Workspace de **ROS 2** utilizado para la práctica de robótica.
+Este repositorio contiene ejercicios y ejemplos desarrollados durante la materia.
 
 ---
 
 ## Estructura del repositorio
 
-Este repositorio corresponde a un **ROS 2 workspace completo**.  
+Este repositorio corresponde a un **ROS 2 workspace completo**.
 El archivo `README.md` se encuentra al mismo nivel que los directorios generados por `colcon`.
 
 ```
-
 ros2_ws/
 ├── src/
 ├── build/
 ├── install/
 ├── log/
 └── README.md
-
 ```
 
-El código fuente de los paquetes se encuentra en:
+El código fuente de los paquetes se encuentra en el directorio:
 
 ```
-
 src/
-
-````
+```
 
 ---
 
-## Compilar el workspace
+## Compilación del workspace
 
-Antes de ejecutar cualquier nodo o launch file, compilar el workspace:
+Antes de ejecutar cualquier nodo o launch file es necesario compilar el workspace.
 
 ```bash
 cd ros2_ws
 colcon build
-````
+```
 
-Luego cargar el entorno:
+Luego cargar el entorno de ROS:
 
 ```bash
 source install/setup.bash
@@ -51,17 +44,23 @@ source install/setup.bash
 
 ---
 
-## Ejecutar los ejercicios
+## Ejecución de los ejercicios
 
-Cada ejercicio se ejecuta mediante un **launch file**.
+Cada ejercicio está organizado mediante **launch files**.
 
-Formato de los archivos:
+El formato de los archivos es:
 
 ```
 ejemX.launch.py
 ```
 
-Ejemplo de ejecución:
+Ejemplo:
+
+```
+ejem1.launch.py
+```
+
+Para ejecutar un ejercicio:
 
 ```bash
 ros2 launch ourpkg ejem1.launch.py
@@ -71,25 +70,27 @@ ros2 launch ourpkg ejem1.launch.py
 
 ## Paquete utilizado
 
-Los launch files pertenecen al paquete:
+Los ejercicios se encuentran dentro del paquete:
 
 ```
 ourpkg
 ```
 
+Los launch files están ubicados dentro del directorio `launch/` del paquete.
+
 ---
 
 ## Notas
 
-* Este repositorio se utiliza con fines **educativos**.
-* Cada ejercicio está organizado mediante **launch files independientes**.
-* Es necesario tener **ROS 2 instalado y configurado** previamente.
+* Este repositorio tiene **fines educativos**.
+* Cada ejercicio está separado mediante **launch files independientes**.
+* Es necesario tener **ROS 2 instalado y configurado** antes de ejecutar el workspace.
 
 ---
 
 ## Recomendación
 
-En proyectos ROS reales se recomienda **no subir los directorios generados por compilación**:
+En proyectos ROS reales normalmente **no se suben al repositorio los directorios generados por compilación**, como:
 
 ```
 build/
@@ -97,9 +98,4 @@ install/
 log/
 ```
 
-Estos directorios normalmente se excluyen mediante `.gitignore`.
-
-```
-
-Si quieres, también puedo darte una **versión de README que usan muchos repositorios de ROS en GitHub** (con badges, estructura de paquetes y comandos `ros2 run` / `ros2 launch`). Eso haría que tu repo se vea **mucho más profesional**.
-```
+Estos directorios suelen excluirse utilizando un archivo `.gitignore`.
