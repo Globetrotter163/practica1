@@ -31,6 +31,7 @@ setup(
             'my_node = ourpkg.my_node:main',
             'sensors_pub = ourpkg.two_sensors:main',
             'sensors_monitor = ourpkg.sensor_monitor:main',
+            'robot_state = ourpkg.robot_state_monitor:main',
         ],
     },
 )
